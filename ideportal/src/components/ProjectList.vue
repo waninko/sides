@@ -4,8 +4,10 @@
 
     <h3>Projects in this category:</h3>
     <div v-for="(project, index) in allProjects" :key="index">
-      <div v-if="selectedCategory==project.cat">
-        <a :href="project.link">{{project.name}}</a>
+      <div v-for="(proCats, index) in project.cat" :key="index">
+      <div v-if="selectedCategory==proCats">
+        <a :href="project.link">{{project.name}}</a> 
+        </div>
       </div>
     </div>
   </div>
